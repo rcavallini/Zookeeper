@@ -125,16 +125,21 @@ Switching on camera from habitat with rabbits...
  ]\      _\    /"\\
 (" ~----( ~   Y.  )
 It seems there will be more rabbits soon!"""
-print("Which habitat # do you need? ")
+
 print("camel = 0")
 print("lion = 1")
 print("deer = 2")
 print("goose = 3")
 print("bat = 4")
 print("rabbit = 5")
-list_habitat = [camel, lion, deer, goose, bat, rabbit]
-habitat = input()
 
-print(list_habitat[int(habitat)])
-print("---")
-print("The end of the program. To check another habitat restart the watcher please.")
+animals = [camel, lion, deer, goose, bat, rabbit]
+
+while True:
+    print("Which habitat # do you need? 0-5")
+    habitat = input()
+    if habitat == 'exit':
+        print('See you!')
+        break
+    print(animals[int(habitat)])
+    print("---")
